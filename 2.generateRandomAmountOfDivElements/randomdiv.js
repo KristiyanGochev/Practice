@@ -8,22 +8,22 @@ function generateDiv() {
     var intNumTo = parseInt(numTo);
     _getValidation(numFrom, numTo);
     var count = _generateRandom(intNumFrom, intNumTo);
-    var i = 0;
+    
 
     for (var i = 0; i <= count; i++) {
         var div = document.createElement("div");
         dfrag.appendChild(div);
     }
-    for (i = 0; i < dfrag.childNodes.length; i++) {
+    for (var i = 0; i < dfrag.childNodes.length; i++) {
         div = dfrag.childNodes[i];
         _getDivStyle(div);
     }
     divA.appendChild(dfrag);
 };
 function _getRndColor() {
-    var r = ('0' + _generateRandom(0, 255).toString(16)).substr(-2), // red
-        g = ('0' + _generateRandom(0, 255).toString(16)).substr(-2), // green
-        b = ('0' + _generateRandom(0, 255).toString(16)).substr(-2); // blue
+    var r = ('0' + _generateRandom(0, 255).toString(16)).substr(-2),
+        g = ('0' + _generateRandom(0, 255).toString(16)).substr(-2),
+        b = ('0' + _generateRandom(0, 255).toString(16)).substr(-2);
     return '#' + r + g + b;
 };
 
