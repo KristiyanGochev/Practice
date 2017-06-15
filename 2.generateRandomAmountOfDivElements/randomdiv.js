@@ -47,12 +47,10 @@ function _getDivStyle(div) {
     div.style.width = _generateRandom(10, 800) + "px";
     div.style.height = _generateRandom(10, 800) + "px";
     div.style.backgroundColor = _getRndColor();
-    div.style.color = _getRndColor();
-    div.style.position = "absolute";
     div.style.border = "solid";
     div.style.borderColor = _getBorderColor(div.style.width, div.style.height);
     div.style.borderWidth = _generateRandom(0.5, 5) + 'px';
-    div.style.borderRadius = _generateRandom(2, 3) + "px";
+    div.style.borderRadius = _generateRandom(2, 10) + "px";
 };
 function _getValidation(numbOne, numbTwo) {
     if ((numbOne == "") || (numbTwo == "")) {
