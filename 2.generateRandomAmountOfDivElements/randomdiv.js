@@ -1,64 +1,72 @@
-document.getElementById("btn").addEventListener("click", generateDiv);
-function generateDiv() {
-    var divA = document.getElementById('mainDiv');
-    var dfrag = document.createDocumentFragment();
-    var numFrom = document.getElementById('numFrom').value;
-    var intNumFrom = parseInt(numFrom);
-    var numTo = document.getElementById('numTo').value;
-    var intNumTo = parseInt(numTo);
-    _getValidation(numFrom, numTo);
-    var count = _generateRandom(intNumFrom, intNumTo);
-    
+(function () {
+    document.getElementById("btn").addEventListener("click", generateDiv);
+    function generateDiv() {
+        "use strict"
+        var divA = document.getElementById('mainDiv');
+        var dfrag = document.createDocumentFragment();
+        var numFrom = document.getElementById('numFrom').value;
+        var intNumFrom = parseInt(numFrom);
+        var numTo = document.getElementById('numTo').value;
+        var intNumTo = parseInt(numTo);
+        _getValidation(numFrom, numTo);
+        var count = _generateRandom(intNumFrom, intNumTo);
 
-    for (var i = 0; i <= count; i++) {
-        var div = document.createElement("div");
-        dfrag.appendChild(div);
-    }
-    for (var i = 0; i < dfrag.childNodes.length; i++) {
-        div = dfrag.childNodes[i];
-        _getDivStyle(div);
-    }
-    divA.appendChild(dfrag);
-};
+        for (var i = 0; i <= count; i++) {
+            var div = document.createElement("div");
+            dfrag.appendChild(div);
+        }
+        for (var i = 0; i < dfrag.childNodes.length; i++) {
+            div = dfrag.childNodes[i];
+            _setDivStyle(div);
+        }
+        divA.appendChild(dfrag);
+    };
+    function _setDivStyle(div) {
+        "use strict"
+        div.className = "newDivs";
+        div.style.width = _generateRandom(50, 200) + "px";
+        div.style.height = _generateRandom(50, 200) + "px";
+        div.style.backgroundColor = _setRndColor();
+        div.style.border = "solid";
+        div.style.left = _generateRandom(10, 800) + "px";
+        div.style.top = _generateRandom(10, 800) + "px";
+        div.style.borderColor = _setBorderColor(div.style.width, div.style.height, div.style.top, div.style.left);
+        div.style.borderWidth = _generateRandom(0.5, 5) + 'px';
+        div.style.borderRadius = _generateRandom(0, 100) + "px";
+    };
 
-function _getDivStyle(div) {
-    div.className = "newDivs";
-    div.style.width = _generateRandom(10, 800) + "px";
-    div.style.height = _generateRandom(10, 800) + "px";
-    div.style.backgroundColor = _getRndColor();
-    div.style.border = "solid";
-    div.style.borderColor = _getBorderColor(div.style.width, div.style.height);
-    div.style.borderWidth = _generateRandom(0.5, 5) + 'px';
-    div.style.borderRadius = _generateRandom(2, 10) + "px";
-};
+    function _setRndColor() {
+        "use strict"
+        var r = _generateRandom(0, 255), // red
+            g = _generateRandom(0, 255), // green
+            b = _generateRandom(0, 255); // blue
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+    };
 
-function _getRndColor() {
-    var r = ('0' + _generateRandom(0, 255).toString(16)).substr(-2), // red
-        g = ('0' + _generateRandom(0, 255).toString(16)).substr(-2), // green
-        b = ('0' + _generateRandom(0, 255).toString(16)).substr(-2); // blue
-    return '#' + r + g + b;
-};
+    function _generateRandom(min, max) {
+        "use strict"
+        var number = Math.floor(Math.random() * (max - min)) + min;
+        return number;
+    };
 
-function _generateRandom(min, max) {
-    var number = Math.floor(Math.random() * (max - min)) + min;
-    return number;
-};
+    function _setBorderColor(width, height, top, left) {
+        "use strict"
+        if ((parseInt(left, 10) + (parseInt(width, 10)) > 800) || (parseInt(top, 10)) + (parseInt(height, 10)) > 600) {
+            var color = 'RED';
+        } else {
+            var color = _setRndColor()
+        } return color;
+    };
 
-function _getBorderColor(width, height) {
+    function _getValidation(numbOne, numbTwo) {
+        "use strict"
+        if ((numbOne == "") || (numbTwo == "")) {
+            alert("Please fill the empty fields")
 
-    if ((parseInt(width, 10) > 755) || (parseInt(height, 10)) > 505) {
-        color = 'RED';
-    } else {
-        color = _getRndColor()
-    } return color;
-};
-
-function _getValidation(numbOne, numbTwo) {
-    if ((numbOne == "") || (numbTwo == "")) {
-        alert("Please fill the empty fields")
-
-    }
-    else if (isNaN(parseInt(numbOne)) || isNaN(parseInt(numbTwo))) {
-        alert("Please enter a valid Numbers")
-    }
-};
+        }
+        else if (isNaN(parseInt(numbOne)) || isNaN(parseInt(numbTwo))) {
+            alert("Please enter a valid Numbers")
+        }
+        return;
+    };
+}());
