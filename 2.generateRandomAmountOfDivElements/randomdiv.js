@@ -10,8 +10,9 @@
         var intNumTo = parseInt(numTo);
         _getValidation(numFrom, numTo);
         var count = _generateRandom(intNumFrom, intNumTo);
-
-        for (var i = 0; i <= count; i++) {
+		clearBox(divA);
+		
+        for (var i = intNumFrom; i <= count; i++) {
             var div = document.createElement("div");
             dfrag.appendChild(div);
         }
@@ -20,7 +21,12 @@
             _setDivStyle(div);
         }
         divA.appendChild(dfrag);
-    };
+	};
+	
+	function clearBox(divA)
+{
+    divA.innerHTML = "";
+}
     function _setDivStyle(div) {
         "use strict"
         div.className = "newDivs";
@@ -62,11 +68,13 @@
         "use strict"
         if ((numbOne == "") || (numbTwo == "")) {
             alert("Please fill the empty fields")
-
         }
         else if (isNaN(parseInt(numbOne)) || isNaN(parseInt(numbTwo))) {
             alert("Please enter a valid Numbers")
         }
+		else if(numbOne > numbTwo){
+			alert("Please note that the 'From' number must be with lower value than the 'To' number ")
+		}
         return;
     };
 }());
