@@ -8,7 +8,7 @@
         var intNumFrom = parseInt(numFrom);
         var numTo = document.getElementById('numTo').value;
         var intNumTo = parseInt(numTo);
-        _getValidation(numFrom, numTo);
+        _getValidation(intNumFrom, intNumTo, numFrom, numTo);
         var count = _generateRandom(intNumFrom, intNumTo);
 	_clearBox(divA);
 		
@@ -64,9 +64,11 @@
     	divA.innerHTML = "";
     };
 
-   function _getValidation(intNumFrom, intNumTo, numFrom, numTo) {
+function _getValidation(intNumFrom, intNumTo, numFrom, numTo) {
         "use strict"
-	if (isNaN(parseInt(intNumFrom)) || isNaN(parseInt(intNumTo))) {
+        if ((numFrom == "") || (numTo == "")) {
+            alert("Please fill the empty fields")
+	}else if (isNaN(parseInt(intNumFrom)) || isNaN(parseInt(intNumTo))) {
             alert("Please enter a valid Numbers")
         }else if(intNumFrom > intNumTo){
 	    alert("Please note that the 'From' number must be with lower value than the 'To' number ")
