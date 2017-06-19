@@ -10,7 +10,7 @@
         var intNumTo = parseInt(numTo);
         _getValidation(numFrom, numTo);
         var count = _generateRandom(intNumFrom, intNumTo);
-		clearBox(divA);
+	_clearBox(divA);
 		
         for (var i = intNumFrom; i <= count; i++) {
             var div = document.createElement("div");
@@ -23,10 +23,6 @@
         divA.appendChild(dfrag);
 	};
 	
-	function clearBox(divA)
-{
-    divA.innerHTML = "";
-}
     function _setDivStyle(div) {
         "use strict"
         div.className = "newDivs";
@@ -63,6 +59,10 @@
             var color = _setRndColor()
         } return color;
     };
+	
+    function _clearBox(divA){
+    	divA.innerHTML = "";
+    };
 
     function _getValidation(numbOne, numbTwo) {
         "use strict"
@@ -71,10 +71,9 @@
         }
         else if (isNaN(parseInt(numbOne)) || isNaN(parseInt(numbTwo))) {
             alert("Please enter a valid Numbers")
-        }
-		else if(numbOne > numbTwo){
-			alert("Please note that the 'From' number must be with lower value than the 'To' number ")
-		}
+        }else if(numbOne > numbTwo){
+	    alert("Please note that the 'From' number must be with lower value than the 'To' number ")
+	}
         return;
     };
 }());
