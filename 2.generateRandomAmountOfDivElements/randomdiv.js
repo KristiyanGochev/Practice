@@ -64,12 +64,9 @@
     	divA.innerHTML = "";
     };
 
-    function _getValidation(intNumFrom, intNumTo) {
+   function _getValidation(intNumFrom, intNumTo, numFrom, numTo) {
         "use strict"
-        if ((intNumFrom == "") || (intNumTo == "")) {
-            alert("Please fill the empty fields")
-        }
-        else if (isNaN(parseInt(intNumFrom)) || isNaN(parseInt(intNumTo))) {
+	if (isNaN(parseInt(intNumFrom)) || isNaN(parseInt(intNumTo))) {
             alert("Please enter a valid Numbers")
         }else if(intNumFrom > intNumTo){
 	    alert("Please note that the 'From' number must be with lower value than the 'To' number ")
