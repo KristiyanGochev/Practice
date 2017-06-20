@@ -1,9 +1,10 @@
 (function () {
-    var divs = Array(5);
+    var divs = new Array(5);
     for (var i = 0; i < divs.length; i++) {
         var currentDiv = document.createElement('div');
-        document.body.appendChild(currentDiv);
-        divs[i] = currentDiv;
+        var currentDivNode = currentDiv.cloneNode(true);
+        document.body.appendChild(currentDivNode);
+        divs[i] = currentDivNode;
     }
     var x = 300;
     var y = 200;
