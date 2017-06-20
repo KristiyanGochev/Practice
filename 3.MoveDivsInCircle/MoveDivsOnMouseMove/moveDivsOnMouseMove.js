@@ -24,8 +24,8 @@
         };
 
         window.addEventListener('mousemove', function (event) {
-            x = event.clientX;
-            y = event.clientY;
+            x = event.clientX - radius/2;
+            y = event.clientY - radius/2;
         }, true);
     }, 100);
 }());
