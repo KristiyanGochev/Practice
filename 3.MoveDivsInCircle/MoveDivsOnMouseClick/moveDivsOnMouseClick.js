@@ -23,7 +23,6 @@
             divs[i].style.left = left + "px";
             divs[i].style.top = top + "px";
         };
-
         window.addEventListener('click', function (event) {
             x = event.clientX - radius/2;
             y = event.clientY - radius/2;
