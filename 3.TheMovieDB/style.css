@@ -1,0 +1,11 @@
+.mainDiv{
+
+  margin: 0 auto;
+  left: 500px;
+  text-align: center;
+}
+
+#input{
+  left: 550px;
+  width: 200px;
+}
