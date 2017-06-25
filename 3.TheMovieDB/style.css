@@ -9,3 +9,16 @@
   left: 550px;
   width: 200px;
 }
+.hide{
+
+display:none;
+}
+.show{
+  display:initial;
+}
+#pagesContainer{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
