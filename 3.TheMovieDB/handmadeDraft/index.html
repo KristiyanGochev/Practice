@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <label for="key">Please enter your key</label>
+        <input type="text" id="key" value="ee4147bedd685cdebb23042532c92117">
+    </div>
+
+    <div class="mainDiv">
+        <h2>Search for a movie</h2>
+        <input type="text" id="input">
+        <button id="btn">Search</button>
+    </div>
+
+    <div class="container">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Original Title</th>
+                    <th>Release Date</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+    </div>
+    <div id="pagesContainer">
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="image">
+            <div id="detailsContainer">
+            </div>
+        </div>
+    </div>
+    <script src="requests.js"></script>
+</body>
+
+</html>
