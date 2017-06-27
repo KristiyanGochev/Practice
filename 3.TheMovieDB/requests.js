@@ -74,7 +74,7 @@
         searchKeyword = $("#input").val();
         key = $("#key").val();
         if (searchKeyword == "") {
-            alert("Please enter your a movie name")
+            alert("The movie query is empty")
             return;
         };
 
