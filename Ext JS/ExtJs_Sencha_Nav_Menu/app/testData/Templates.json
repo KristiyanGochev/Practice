@@ -1,0 +1,34 @@
+﻿{
+  "templates": [
+    {
+      "id": 1,
+      "name": "templateOne",
+      "components": [ 1, 2, 3 ],
+      "html": "<tpl><div class=\"flex-container\"><div style=\"border:1px solid black\">{header}</div><div id=\"mainDiv\">{grid}</div><footer>{footer}</footer></div></tpl>"
+    },
+    {
+      "id": 2,
+      "name": "templateTwo",
+      "components": [ 1, 2 ],
+      "html": "<tpl><div class=\"flex-container\"><div style=\"border:1px solid black\">{footer}</div><div id=\"mainDiv\">{header}</div></div></tpl>"
+    },
+    {
+      "id": 3,
+      "name": "templateThree",
+      "components": [ 1, 4 ],
+      "html": "<tpl><div class=\"flex-container\"><div style=\"border:1px solid black\">{header}</div><div id=\"mainDiv\">{grid}</div></div></tpl>"
+    },
+    {
+      "id": 4,
+      "name": "templateFour",
+      "components": [ 1, 2, 3, 4 ],
+      "html": "<tpl><div class=\"flex-container\"><div style=\"border:1px solid black\">{header}</div><div id=\"mainDiv\">{grid}</div><div id=\"secondDiv\">{main}</div><footer>{footer}</footer></div></tpl>"
+    },
+    {
+      "id": 5,
+      "name": "templateFive",
+      "components": [ 1, 2, 3, 4, 5 ],
+      "html": "<tpl><div class=\"flex-container\"><div style=\"border:1px solid black\">{header}</div><div id=\"mainDiv\">{grid}</div><div id=\"secondDiv\">{main}</div><div id=\"spreadsheet\">{spreadSheet}</div><footer>{footer}</footer></div></tpl>"
+    }
+  ]
+}
