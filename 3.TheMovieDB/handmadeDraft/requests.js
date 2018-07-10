@@ -112,7 +112,7 @@ $(document).on('click', "td", function () {
     $.ajax(settings).done(function (response) {
         $("#detailsContainer").empty();
         var movie = response;
-        var imgUrl = 'http://image.tmdb.org/t/p/w320/';
+        var imgUrl = 'http://image.tmdb.org/t/p/w185/';
         var $modal = $('#myModal');
         var $span = $(".close")[0];
         //TO DO // [0].name
