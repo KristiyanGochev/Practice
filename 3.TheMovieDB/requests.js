@@ -97,7 +97,7 @@
         $.ajax(settings).done(function (response) {
             $("#detailsContainer").empty();
             var movie = response;
-            var imgUrl = 'http://image.tmdb.org/t/p/w320/';
+            var imgUrl = 'http://image.tmdb.org/t/p/w185/';
             var $modal = $('#myModal');
             var $span = $(".close")[0];
             var details = [movie.title, movie.original_title, movie.release_date, movie.spoken_languages, movie.production_countries, movie.overview];
