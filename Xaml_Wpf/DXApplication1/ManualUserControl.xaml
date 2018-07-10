@@ -1,0 +1,36 @@
+﻿<UserControl xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit"  xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"  xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DXApplication1"
+             xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" x:Class="DXApplication1.ManualUserControl"
+             mc:Ignorable="d" 
+            d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <dxwui:PageView Header="User manual"
+                        HorizontalAlignment="Stretch"
+                        Height="auto"
+                        VerticalAlignment="Stretch"
+                        Width="auto"
+                        SelectionChanged="PageView_SelectionChanged">
+            <dxwui:PageViewItem Header="Active Manual">
+                <Grid Background="Yellow">
+                    <dxe:RangeControl />
+                </Grid>
+            </dxwui:PageViewItem>
+            <dxwui:PageViewItem Header="Unactive Manual">
+                <Grid Background="Green"/>
+            </dxwui:PageViewItem>
+            <dxwui:PageViewItem Header="Kris">
+               
+            </dxwui:PageViewItem>
+            <dxwui:PageViewItem Header="Basi Manuala">
+                <Grid Background="Red">
+                  <dxre:RichEditControl CommandBarStyle="Ribbon" />
+                </Grid>
+            </dxwui:PageViewItem>
+        </dxwui:PageView>
+
+    </Grid>
+</UserControl>

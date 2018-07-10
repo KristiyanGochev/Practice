@@ -1,0 +1,28 @@
+{
+    "_id": "5acdfe90d6d2df8c09bdc3f2",
+    "Giud": "b07f177f-b41e-4fec-b7f6-56350a35b932",
+    "IsActive": false,
+    "Balance": "$2,483.33",
+    "Picture": "http://placehold.it/32x32",
+    "Age": 35,
+    "EyeColor": "green",
+    "Name": "Kathrine Houston",
+    "Gender": "female",
+    "Company": "PHUEL",
+    "Email": "kathrinehouston@phuel.com",
+    "Phone": "+1 (852) 582-3465",
+    "Address": "616 Oxford Walk, Matthews, South Carolina, 9336",
+    "About": "Sunt pariatur consectetur cupidatat anim deserunt deserunt reprehenderit aliquip excepteur aliqua cillum proident consequat voluptate. Enim incididunt sint ut esse proident cupidatat laborum enim cillum aliqua ullamco voluptate. Aute est tempor in fugiat est commodo irure ut ullamco pariatur.\r\n",
+    "Registered": "2014-07-23T10:02:35 -03:00",
+    "Longitude": 108.073692,
+    "Tags": [
+      "non",
+      "exercitation",
+      "quis",
+      "duis",
+      "mollit",
+      "in",
+      "adipisicing"
+    ],
+    "FavoriteFruit": "banana"
+  }

@@ -1,0 +1,57 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DXApplication1"
+             xmlns:dxwuin="http://schemas.devexpress.com/winfx/2008/xaml/windowsui/navigation"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" x:Class="DXApplication1.TemplatesUserControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="White" x:Name="MainGrid">
+        <dxlc:TileLayoutControl VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Name="tileLayoutControl1">
+            <dxlc:Tile x:Name="tileOne"
+                       Header="Template one"
+                       Size="Small"
+                       Click="tileOne_Click"
+                       MouseRightButtonUp="tileOne_MouseRightButtonUp"
+                       dxwuin:Navigation.NavigateTo="TemplateOne">
+                <Image Name="image1" Stretch="Fill" Source="D:/WorkItems/templateOne.jpg" />
+            </dxlc:Tile>
+            
+            <dxlc:Tile Header="Research"
+                       Name="tile2"
+                       Size="Small"
+                       Background="#FFC14AAF"
+                       dxwuin:Navigation.NavigateTo="TemplateTwo">
+                <Image Name="image2" Stretch="Fill" Source="Icons/Clients.png" />
+            </dxlc:Tile>
+
+            <dxlc:Tile Name="tile5" Size="Small"
+                       HorizontalHeaderAlignment="Center"
+                       Background="#FF666666"
+                       ContentChangeInterval="00:00:03"
+                       AnimateContentChange="True" Margin="-320,169,320,-169">
+            </dxlc:Tile>
+            <dxlc:Tile Name="tilex" Size="Small"
+                       VerticalAlignment="Bottom"
+                       Background="#FF666666"
+                       ContentChangeInterval="00:00:03"
+                       AnimateContentChange="True" Margin="-320,0,320,-319" HorizontalAlignment="Right" Width="150">
+            </dxlc:Tile>
+            <dxlc:Tile Name="tilea" Size="Small"
+                       HorizontalHeaderAlignment="Center"
+                       Background="#FF666666"
+                       ContentChangeInterval="00:00:03"
+                       AnimateContentChange="True" Margin="-315,0,315,0">
+            </dxlc:Tile>
+            <dxlc:Tile Name="tileasd" Size="Small"
+                       HorizontalHeaderAlignment="Center"
+                       Background="#FF666666"
+                       ContentChangeInterval="00:00:03"
+                       AnimateContentChange="True" Margin="-475,169,475,-169">
+            </dxlc:Tile>
+
+        </dxlc:TileLayoutControl>
+    </Grid>
+</UserControl>
