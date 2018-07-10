@@ -104,7 +104,7 @@
             var currentImage = imgUrl + movie.poster_path;
             console.log(movie);
 
-            if (currentImage == "http://image.tmdb.org/t/p/w320/null") {
+            if (currentImage == "http://image.tmdb.org/t/p/w185/null") {
                 currentImage = "noImageAvailable.jpg"
             };
 
