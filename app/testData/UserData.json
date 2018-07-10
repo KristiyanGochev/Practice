@@ -1,0 +1,46 @@
+﻿{
+  "data": [
+    {
+      "userName": "Бай Хуй",
+      "companyName": "PlayBox",
+      "address": "Sofia",
+      "email": "kristiyan@abv.bg",
+      "age": "25"
+    },
+    {
+      "userName": "ASDAD",
+      "companyName": "PlayBox",
+      "address": "Sofia",
+      "email": "georgi@abv.bg",
+      "age": "310"
+    },
+    {
+      "userName": "GUZ",
+      "companyName": "Billa",
+      "address": "PloveDiv",
+      "email": "Pesho@abv.bg",
+      "age": "633"
+    },
+    {
+      "userName": "Vanko",
+      "companyName": "Billa",
+      "address": "PloveDiv",
+      "email": "Pesho@abv.bg",
+      "age": "63"
+    },
+    {
+      "userName": "БГ тест",
+      "companyName": "Била",
+      "address": "Перник",
+      "email": "ас@abv.bg",
+      "age": 50
+    },
+    {
+      "userName": "Hristo",
+      "companyName": "Billa",
+      "address": "ot Varna",
+      "email": "Risto@abv.bg",
+      "age": "63"
+    }
+  ]
+}

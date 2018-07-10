@@ -1,0 +1,7 @@
+﻿{
+  "data": [
+    {
+      "html": "<tpl for=\".\"><div class=\"flex-container\"><div style=\"border:1px solid black\">{headerDiv}</div><div id=\"mainDiv\">{mainDiv}</div><footer>{footerDiv}</footer></div></tpl>"
+    }
+  ]
+}
